@@ -1,5 +1,5 @@
 {
-  "name": "create-unibeautify-beautifier",
+  "name": "@unibeautify/create-unibeautify-beautifier",
   "version": "0.0.1",
   "description": "Create a Unibeautify beautifier",
   "main": "./dist/index.js",
