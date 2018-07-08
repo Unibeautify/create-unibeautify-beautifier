@@ -8,11 +8,11 @@ declare namespace yargsInteractive {
     prompt?: string;
     options?: string[];
   }
-    
+
   interface Option {
-    [key: string]: OptionData | {default: boolean};
+    [key: string]: OptionData | { default: boolean };
   }
-  
+
   interface Interactive {
     usage(usage: string): Interactive;
     interactive(options: Option): Interactive;
