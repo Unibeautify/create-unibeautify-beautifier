@@ -3,3 +3,7 @@
 !dist/**/*.js.map
 !dist/**/*.d.ts
 !dist/**/*.json
+!bin/**/*.js
+!bin/**/*.js.map
+!bin/**/*.d.ts
+!bin/**/*.json

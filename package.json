@@ -2,15 +2,15 @@
   "name": "@unibeautify/create-unibeautify-beautifier",
   "version": "0.0.2",
   "description": "Create a Unibeautify beautifier",
-  "main": "./dist/cli.js",
-  "typings": "dist/src/cli.d.ts",
+  "main": "./bin/create-unibeautify-beautifier.js",
+  "typings": "bin/create-unibeautify-beautifier.d.ts",
   "bin": {
-    "create-unibeautify-beautifier": "./dist/cli.js"
+    "create-unibeautify-beautifier": "./bin/create-unibeautify-beautifier.js"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "npm run clean && npm run compile",
-    "clean": "rimraf dist",
+    "clean": "rimraf bin",
     "compile": "tsc",
     "jest": "jest",
     "test": "npm run build && npm run lint && npm run jest",

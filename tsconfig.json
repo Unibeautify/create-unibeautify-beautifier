@@ -10,7 +10,7 @@
         "target": "ES6",
         "declaration": true,
         "moduleResolution": "node",
-        "outDir": "dist",
+        "outDir": "bin",
         "rootDir": "./src",
         "baseUrl": ".",
         "paths": {
