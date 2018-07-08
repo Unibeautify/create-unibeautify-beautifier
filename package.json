@@ -1,0 +1,45 @@
+{
+  "name": "create-unibeautify-beautifier",
+  "version": "0.0.1",
+  "description": "Create a Unibeautify beautifier",
+  "main": "./dist/index.js",
+  "typings": "dist/src/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf dist",
+    "compile": "tsc",
+    "jest": "jest",
+    "test": "npm run build && npm run lint && npm run jest",
+    "lint": "tslint '{src,test}/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unibeautify/create-unibeautify-beautifier.git"
+  },
+  "keywords": [
+    "unibeautify",
+    "create",
+    "beautifier"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unibeautify/create-unibeautify-beautifier/issues"
+  },
+  "homepage": "https://github.com/Unibeautify/create-unibeautify-beautifier#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "yargs-interactive": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.4",
+    "@types/node": "^10.5.2",
+    "jest": "^23.3.0",
+    "ts-jest": "^23.0.0",
+    "tslint": "^5.10.0",
+    "tslint-clean-code": "^0.2.7",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.9.2"
+  }
+}
