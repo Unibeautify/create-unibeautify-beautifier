@@ -1,6 +1,6 @@
 {
   "name": "@unibeautify/create-unibeautify-beautifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a Unibeautify beautifier",
   "main": "./dist/cli.js",
   "typings": "dist/src/cli.d.ts",
