@@ -1,4 +1,4 @@
-declare function yargsInteractive(): any;
+declare function yargsInteractive(): yargsInteractive.Interactive;
 
 declare namespace yargsInteractive {
   interface OptionData {
@@ -6,16 +6,17 @@ declare namespace yargsInteractive {
     describe: string;
     default?: string | number | boolean;
     prompt?: string;
+    options?: string[];
   }
     
   interface Option {
-    [key: string]: OptionData;
+    [key: string]: OptionData | {default: boolean};
   }
   
   interface Interactive {
-    usage(usage: string): any;
-    interactive(options: Option[]): any;
-    then(callback: (result: any) => any): any;
+    usage(usage: string): Interactive;
+    interactive(options: Option): Interactive;
+    then(callback: (result: any) => any): Interactive;
   }
 }
 

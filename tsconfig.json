@@ -11,7 +11,11 @@
         "declaration": true,
         "moduleResolution": "node",
         "outDir": "dist",
-        "rootDir": "./src"
+        "rootDir": "./src",
+        "baseUrl": ".",
+        "paths": {
+          "*": ["src/@types/*"]
+        },        
     },
     "include": [
         "./src/**/*.ts"
