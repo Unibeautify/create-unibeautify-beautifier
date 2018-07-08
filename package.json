@@ -2,8 +2,11 @@
   "name": "@unibeautify/create-unibeautify-beautifier",
   "version": "0.0.1",
   "description": "Create a Unibeautify beautifier",
-  "main": "./dist/index.js",
-  "typings": "dist/src/index.d.ts",
+  "main": "./dist/cli.js",
+  "typings": "dist/src/cli.d.ts",
+  "bin": {
+    "create-unibeautify-beautifier": "./dist/cli.js"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "npm run clean && npm run compile",
