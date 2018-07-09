@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import * as yargsInteractive from "yargs-interactive";
+import * as path from "path";
 import chalk from "chalk";
 import { spawn } from "child_process";
 const { scaffold } = require("egad");
@@ -22,20 +23,40 @@ const options: yargsInteractive.Option = {
     options: ["Node", "Executable"],
   },
   packageName: {
-    describe: "What is the name of the package or command of the executable?",
+    describe: "What is the name of the package (node only)?",
+    prompt: "always",
+    type: "input",
+  },
+  exeCommand: {
+    describe: "What is the command of the exe (executable only)?",
+    prompt: "always",
+    type: "input",
+  },
+  homepageUrl: {
+    describe: "What is the homepage URL of the beautifier?",
+    prompt: "always",
+    type: "input",
+  },
+  installationUrl: {
+    describe: "What is the URL containing installation instructions for the beautifier?",
+    prompt: "always",
+    type: "input",
+  },
+  bugsUrl: {
+    describe: "What is the URL to report bugs for the beautifier?",
     prompt: "always",
     type: "input",
   },
 };
 
+// tslint:disable:no-console
 yargsInteractive()
   .usage("$0 <command> [args]")
   .interactive(options)
   .then((result: any) => {
     result.dashedName = result.name.replace(/\s+/g, "-").toLowerCase();
-    // tslint:disable
-    console.log(result);
-    return scaffold(template_url, process.cwd(), result, {})
+    const destination = path.resolve(process.cwd(), `beautifier-${result.dashedName}`);
+    return scaffold(template_url, destination, result, {})
       .then((results: any) => {
         results.forEach((fileInfo: any) => {
           console.log(
@@ -46,11 +67,11 @@ yargsInteractive()
             }: ${fileInfo.path}`
           );
         });
-        return console.log(chalk.blue("Finished scaffolding files!"));
+        return console.log(chalk.blue("Finished scaffolding files."));
       })
       .then(() => {
-        console.log(chalk.blue("\nInstalling Node dependencies!"));
-        const child = spawn("npm", ["install", "--prefix", process.cwd()], {
+        console.log(chalk.blue("\nInstalling Node dependencies..."));
+        const child = spawn("npm", ["install", "--prefix", destination], {
           stdio: "inherit",
         });
         child.on("close", code => {

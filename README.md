@@ -6,15 +6,18 @@
 
 ## Installation
 
+If on npm 6 or higher
 ```bash
-$ npm init create-unibeautify-beautifier
+$ npm init @unibeautify/unibeautify-beautifier
+```
+
+If on npm 5 or lower
+```bash
+$ npx @unibeautify/create-unibeautify-beautifier
 ```
 
 ## Usage
-
-
+Running the above command will scaffold out a new directory with all of the basic files to start a beautifier.
 
 ### Help
-
-
-### Example
+Please report any issues with the CLI to this repository. If there are issues with the files that are generated, please report them to https://github.com/Unibeautify/beautifier-template/issues.
