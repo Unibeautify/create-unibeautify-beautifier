@@ -38,7 +38,8 @@ const options: yargsInteractive.Option = {
     type: "input",
   },
   installationUrl: {
-    describe: "What is the URL containing installation instructions for the beautifier?",
+    describe:
+      "What is the URL containing installation instructions for the beautifier?",
     prompt: "always",
     type: "input",
   },
@@ -55,7 +56,10 @@ yargsInteractive()
   .interactive(options)
   .then((result: any) => {
     result.dashedName = result.name.replace(/\s+/g, "-").toLowerCase();
-    const destination = path.resolve(process.cwd(), `beautifier-${result.dashedName}`);
+    const destination = path.resolve(
+      process.cwd(),
+      `beautifier-${result.dashedName}`
+    );
     return scaffold(template_url, destination, result, {})
       .then((results: any) => {
         results.forEach((fileInfo: any) => {

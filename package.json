@@ -13,7 +13,7 @@
     "clean": "rimraf bin",
     "compile": "tsc",
     "jest": "jest",
-    "test": "npm run build && npm run lint && npm run jest",
+    "test": "npm run build && npm run lint",
     "lint": "tslint '{src,test}/**/*.ts'"
   },
   "repository": {
