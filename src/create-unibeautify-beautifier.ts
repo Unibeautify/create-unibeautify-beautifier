@@ -28,7 +28,8 @@ const options: yargsInteractive.Option = {
     type: "input",
   },
   packageName: {
-    describe: "What is the name of the package (node only, what you would install from npm)?",
+    describe:
+      "What is the name of the package (node only, what you would install from npm)?",
     prompt: "always",
     type: "input",
   },
@@ -60,7 +61,9 @@ yargsInteractive()
   .usage("$0 <command> [args]")
   .interactive(options)
   .then((result: any) => {
-    result.dashedName = result.beautifierName.replace(/\s+/g, "-").toLowerCase();
+    result.dashedName = result.beautifierName
+      .replace(/\s+/g, "-")
+      .toLowerCase();
     const destination = path.resolve(
       process.cwd(),
       `beautifier-${result.dashedName}`
