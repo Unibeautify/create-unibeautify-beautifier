@@ -1,6 +1,6 @@
 {
   "name": "@unibeautify/create-unibeautify-beautifier",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Create a Unibeautify beautifier",
   "main": "./bin/create-unibeautify-beautifier.js",
   "typings": "bin/create-unibeautify-beautifier.d.ts",
