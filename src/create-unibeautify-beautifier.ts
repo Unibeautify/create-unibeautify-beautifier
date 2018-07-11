@@ -20,7 +20,7 @@ const options: yargsInteractive.Option = {
     describe: "Is this Node or Executable based?",
     prompt: "always",
     type: "list",
-    options: ["Node", "Executable"],
+    choices: ["Node", "Executable"],
   },
   name: {
     describe: "What is the proper name of the beautifier?",

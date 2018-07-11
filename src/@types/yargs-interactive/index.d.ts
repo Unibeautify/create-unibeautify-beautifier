@@ -6,7 +6,7 @@ declare namespace yargsInteractive {
     describe: string;
     default?: string | number | boolean;
     prompt?: string;
-    options?: string[];
+    choices?: string[];
   }
 
   interface Option {
