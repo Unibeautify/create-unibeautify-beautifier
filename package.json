@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/jest": "24.0.9",
     "@types/node": "10.12.24",
-    "jest": "24.1.0",
+    "jest": "24.3.0",
     "ts-jest": "24.0.0",
     "tslint": "5.13.1",
     "tslint-clean-code": "0.2.9",
