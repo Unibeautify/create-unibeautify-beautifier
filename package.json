@@ -37,7 +37,7 @@
     "yargs-interactive": "^3.0.0"
   },
   "devDependencies": {
-    "@types/jest": "24.9.1",
+    "@types/jest": "27.0.2",
     "@types/node": "10.17.60",
     "jest": "24.9.0",
     "ts-jest": "24.3.0",
